@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Ludiflex</title>
+    <link rel="stylesheet" href="login-signup.css">
+</head>
+<body>
+    <div class="back-btn">
+        <a href="../index.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJpJREFUSEvllEEOgCAMBNeXqS9Tf+bP1E2MaQilVMrByIUDZaa0pAM6r6EzH/8RTABGAJu3pDUlInwBwH2+9t0jsQQSTjAFrlUSNMOZiSYIgWuCMHhOEApPBRLuamQm+Cl92oOjlXzfVwU8lxLrG5v5aIAwSSnDEIlVgmaJJWjuSY1ASlbvRK0VUMKJ2mVcm1+xFOB5wSvR9wUnED8XGWLc0CkAAAAASUVORK5CYII="/></a>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+
+            <div class="login-header">
+                <header>Welcome</header>
+                <p>We are happy to have you back!</p>
+                <br><hr>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" id="login-email" autocomplete="off" required>
+                <label for="email">Email or phone</label>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="login-password" autocomplete="off" required>
+                <label for="password">Password</label>
+            </div>
+    
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="login-check">
+                    <label for="check">Remember me</label>
+                </section>
+    
+                <section>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </section>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="input-submit" value="Sign In">
+            </div>
+            <div class="middle-text">
+                <hr>
+                <p class="or-text">Or</p>
+            </div>
+            <div class="social-sign-in">
+                <button class="input-google">
+                     <img src="google-logo.webp" alt="">
+                     <p>Google</p>
+                </button>
+                <!-- <button class="input-twitter">
+                    <img src="fb-logo.png" alt="">
+                    <p> Facebook</p>
+                </button> -->
+            </div>
+            <div class="sign-up">
+                <p>Don't have account <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    
+        <!-- sign up -->
+        
+        <div class="signup-box">
+            <div class="login-header">
+                <header>Sign Up</header>
+                <p>Create your account!</p>
+                <br><hr>
+            </div>
+            
+            <!-- <div class="input-box" id="first-name">
+                <input type="text" class="input-field"  autocomplete="off" required>
+                <label for="first-name">First Name</label>
+            </div>
+            <div class="input-box" id="last-name">
+                <input type="text" class="input-field"  autocomplete="off" required>
+                <label for="last-name">Last Name</label>
+            </div> -->
+    
+            <div class="input-box">
+                <input type="text" class="input-field" id="signup-email" autocomplete="off" required>
+                <label for="email">Email or phone</label>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="signup-password" autocomplete="off" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="signup-confirm-password" autocomplete="off" required>
+                <label for="password">Confirm password</label>
+            </div>
+            
+            <div class="input-box">
+                <input type="submit" class="input-submit" value="Sign In">
+            </div>
+            <div class="middle-text">
+                <hr>
+                <p class="or-text">Or</p>
+            </div>
+            <div class="social-sign-in">
+                <button class="input-google">
+                     <img src="google-logo.webp" alt="">
+                     <p> Google</p>
+                </button>
+                <!-- <button class="input-twitter">
+                    <img src="fb-logo.png" alt="">
+                    <p> Facebook</p>
+                </button> -->
+            </div>
+            <!-- <div class="sign-up">
+                <p>Don't have account <a href="#">Sign up</a></p>
+            </div> -->
+        </div>
+    </div>
+
+    
+</body>
+
+
+<script>  
+document.addEventListener("DOMContentLoaded", function() {
+    const signUpLink = document.querySelector(".sign-up a");
+    const signUpBox = document.querySelector(".signup-box");
+
+    // Initially hide the signup box
+    signUpBox.style.display = "none";
+
+    signUpLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Toggle visibility of the signup box
+        signUpBox.style.display = signUpBox.style.display === "block" ? "none" : "block";
+
+        // Toggle visibility of the login box
+        const loginBox = document.querySelector(".login-box");
+        loginBox.style.display = loginBox.style.display === "none" ? "block" : "none";
+    });
+});
+
+
+
+
+
+</script>
+</html>
